@@ -1,0 +1,6 @@
+flask==3.0.3
+flask-cors==4.0.0
+flask-session==0.8.0
+openai==1.50.2
+python-dotenv==1.0.1
+bleach==6.1.0

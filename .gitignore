@@ -1,0 +1,39 @@
+# ---------- OS / editors ----------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# ---------- top-level env just in case ----------
+.env
+.env.*.local
+
+# ================== BACKEND (Flask/Python) ==================
+# secrets & runtime artifacts
+backend/.env
+backend/instance/
+
+
+# venvs
+backend/.venv/
+backend/venv/
+
+# caches/compiled
+backend/__pycache__/
+backend/.pytest_cache/
+backend/.mypy_cache/
+backend/*.py[cod]
+backend/*.pid
+backend/.coverage
+backend/coverage/
+
+# logs
+backend/logs/
+backend/*.log
+
+# ================== FRONTEND (React CRA) ==================
+# dependencies
+gpt-faq/node_modules/
+gpt-faq/package-lock.json.lock
+

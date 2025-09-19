@@ -1,0 +1,94 @@
+/* ---- Dark theme palette ---- */
+:root {
+  --bg: #0b0c10;          /* page background */
+  --panel: #15171e;       /* card / textarea background */
+  --panel-border: #2a2e3d;
+  --text: #e9eef5;        /* primary text */
+  --text-muted: #a7b0c3;  /* subtle text (still readable on dark) */
+  --accent: #3b82f6;      /* buttons/links outline */
+  --accent-strong: #2563eb;
+  --success: #10b981;
+  --danger: #ef4444;
+}
+
+/* ---- Page ---- */
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* container spacing */
+.container { max-width: 960px; }
+
+/* make muted text readable on dark */
+.text-muted, .form-text, small, .badge.bg-secondary {
+  color: var(--text-muted) !important;
+}
+
+/* ---- Cards (Q/A history) ---- */
+.card {
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  color: var(--text);
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.35);
+}
+
+/* ---- Form controls ---- */
+.form-control, .form-select {
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--panel-border);
+  border-radius: 10px;
+}
+
+.form-control:focus, .form-select:focus {
+  box-shadow: 0 0 0 0.2rem rgba(59,130,246,0.35);
+  border-color: var(--accent);
+}
+
+/* placeholder should be visible */
+::placeholder {
+  color: var(--text-muted);
+  opacity: 1; /* firefox */
+}
+
+/* ---- Buttons ---- */
+.btn-primary {
+  background-color: var(--accent);
+  border-color: var(--accent);
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--accent-strong);
+  border-color: var(--accent-strong);
+}
+
+/* outline secondary readable on dark */
+.btn-outline-secondary {
+  color: var(--text);
+  border-color: var(--panel-border);
+}
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus {
+  color: var(--text);
+  background: rgba(255,255,255,0.06);
+  border-color: var(--accent);
+}
+
+/* ---- Badges ---- */
+.badge.bg-danger { background-color: var(--danger) !important; }
+.badge.bg-secondary { background-color: rgba(255,255,255,0.08) !important; }
+
+/* ---- Links ---- */
+a { color: var(--accent); }
+a:hover { color: var(--accent-strong); }
+
+/* ---- Answer text preserves formatting and is readable ---- */
+.answer-text {
+  white-space: pre-wrap;
+  color: var(--text);
+}
+
+/* optional: tighter spacing on cards */
+.card .fw-bold { color: var(--text); }
