@@ -8,11 +8,13 @@ Thumbs.db
 # ---------- top-level env just in case ----------
 .env
 .env.*.local
+/key.txt
 
 # ================== BACKEND (Flask/Python) ==================
 # secrets & runtime artifacts
 backend/.env
 backend/instance/
+
 
 
 # venvs
